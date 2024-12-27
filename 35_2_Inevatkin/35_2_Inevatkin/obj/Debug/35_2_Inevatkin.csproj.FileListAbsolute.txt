@@ -1,0 +1,10 @@
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\bin\Debug\35.2_Akulov_project.exe.config
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\bin\Debug\35.2_Akulov_project.exe
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\bin\Debug\35.2_Akulov_project.pdb
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\obj\Debug\35_2_Inevatkin.csproj.AssemblyReference.cache
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\obj\Debug\_35_2_Inevatkin.Form1.resources
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\obj\Debug\_35_2_Inevatkin.Properties.Resources.resources
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\obj\Debug\35_2_Inevatkin.csproj.GenerateResource.cache
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\obj\Debug\35_2_Inevatkin.csproj.CoreCompileInputs.cache
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\obj\Debug\35.2_Akulov_project.exe
+C:\Users\Админ\Desktop\35_2_Inevatkin\35_2_Inevatkin\obj\Debug\35.2_Akulov_project.pdb
