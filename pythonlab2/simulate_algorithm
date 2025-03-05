@@ -1,0 +1,26 @@
+digraph simulate_algorithm {
+	graph [rankdir=TB]
+	start [label="Начало алгоритма" fillcolor=lightgreen shape=ellipse style=filled]
+	init [label="Инициализация параметров" shape=box]
+	arrival_gen [label="Генерация времени поступления задач" shape=box]
+	execution_gen [label="Генерация времени выполнения задач" shape=box]
+	queue_add [label="Добавление задач в очередь событий" shape=box]
+	has_tasks [label="Есть активные задачи?" shape=diamond]
+	event_extract [label="Извлечение события из очереди" shape=box]
+	event_type [label="Событие: приход или завершение?" shape=diamond]
+	task_queue [label="Добавление в очередь задач" shape=box]
+	task_finish [label="Завершение выполнения или возврат в очередь" shape=box]
+	end [label="Конец алгоритма" fillcolor=lightcoral shape=ellipse style=filled]
+	start -> init
+	init -> arrival_gen
+	arrival_gen -> execution_gen
+	execution_gen -> queue_add
+	queue_add -> has_tasks
+	has_tasks -> end [label="Нет"]
+	has_tasks -> event_extract [label="Да"]
+	event_extract -> event_type
+	event_type -> task_queue [label="Приход"]
+	event_type -> task_finish [label="Завершение"]
+	task_queue -> has_tasks
+	task_finish -> has_tasks
+}
