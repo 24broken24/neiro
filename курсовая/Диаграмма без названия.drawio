@@ -1,0 +1,398 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0" version="26.0.11">
+  <diagram name="Страница — 1" id="GBrO1fMy4S7-2p9mx5GE">
+    <mxGraphModel dx="2259" dy="822" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-2" target="3FFpKMN7CzBTacpiuhmd-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-2" value="Начало алгоритма" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="30" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-44" target="3FFpKMN7CzBTacpiuhmd-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-44" value="Генерируется случайное время между поступлением задач с использованием экспоненциального распределения (для моделирования случайных интервалов)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="120" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-46" target="3FFpKMN7CzBTacpiuhmd-48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-46" value="&lt;br&gt;Рассчитываются точные моменты времени, когда каждая задача поступит в систему. Эти моменты времени накапливаются, чтобы получить фактические времена прибытия&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="270" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-48" target="3FFpKMN7CzBTacpiuhmd-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-48" value="Каждая задача имеет своё требуемое время для выполнения, которое также генерируется по экспоненциальному распределению" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="245" y="420" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-50" value="Создаётся словарь, в котором для каждой задачи хранятся все параметры" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="255" y="560" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-52" target="3FFpKMN7CzBTacpiuhmd-54">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-52" value="&lt;div&gt;Создаётся очередь событий. Каждое событие будет связано с прибытием задачи (событие &quot;arrival&quot;) или с её завершением (событие &quot;finish&quot;).&lt;/div&gt;&lt;div&gt;Для каждой задачи добавляется событие &quot;arrival&quot; в очередь&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="670" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-54" target="3FFpKMN7CzBTacpiuhmd-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-54" value="&lt;div&gt;Процессоры инициализируются с состоянием &quot;свободен&quot;, что означает, что на каждом процессоре можно начать выполнение задачи&lt;/div&gt;&lt;div&gt;Для каждого процессора создаются массивы &lt;code&gt;processor_free_times&lt;/code&gt; (когда процессор снова будет свободен) и &lt;code&gt;processor_idle_times&lt;/code&gt; (время простоя процессора).&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="215" y="820" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-56" target="3FFpKMN7CzBTacpiuhmd-58">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-56" value="Создаётся очередь задач, в которую задачи будут поступать на выполнение. Задачи в этой очереди ждут назначения на процессоры" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="990" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-58" target="3FFpKMN7CzBTacpiuhmd-60">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="1250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-58" target="3FFpKMN7CzBTacpiuhmd-136">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="1175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-135" value="после завершения" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3FFpKMN7CzBTacpiuhmd-134">
+          <mxGeometry x="-0.0655" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-58" value="&lt;div&gt;Основной цикл:&lt;/div&gt;&lt;div&gt;while tasks_completed &amp;lt; m&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="225" y="1130" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-60">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="1370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-62" value="да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3FFpKMN7CzBTacpiuhmd-61">
+          <mxGeometry x="-0.0619" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-60" target="3FFpKMN7CzBTacpiuhmd-87">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1000" y="1766" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-86" value="нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3FFpKMN7CzBTacpiuhmd-85">
+          <mxGeometry x="-0.2633" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-60" value="Есть ли события в очереди?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1240" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-63" target="3FFpKMN7CzBTacpiuhmd-65">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="1500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-63" value="Из очереди извлекается событие с минимальным временем. Это может быть событие прибытия задачи (&quot;arrival&quot;) или завершение задачи (&quot;finish&quot;)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="245" y="1370" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-65" target="3FFpKMN7CzBTacpiuhmd-70">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="1555" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-67" value="arrival" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3FFpKMN7CzBTacpiuhmd-66">
+          <mxGeometry x="-0.0176" y="-1" relative="1" as="geometry">
+            <mxPoint x="2" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-65" target="3FFpKMN7CzBTacpiuhmd-75">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="1555" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-69" value="finish" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3FFpKMN7CzBTacpiuhmd-68">
+          <mxGeometry x="-0.1345" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-65" value="Определяется тип события, которое было извлечено из очереди: событие прибытия задачи (&quot;arrival&quot;) или завершения задачи (&quot;finish&quot;)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="185" y="1490" width="290" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-70" target="3FFpKMN7CzBTacpiuhmd-72">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="45" y="1640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-70" value="Обновление текущего времени. Устанавливаем текущий момент времени как момент прибытия задачи" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="1507.5" width="150" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-72" target="3FFpKMN7CzBTacpiuhmd-74">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="45" y="1720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-72" value="Задача добавляется в очередь ожидания на выполнение" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-22.5" y="1630" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-74" target="3FFpKMN7CzBTacpiuhmd-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-74" value="Обновление времени последнего входа в очередь. Обновляется время, когда задача была добавлена в очередь" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-32.5" y="1720" width="155" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-75">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="1630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-75" value="Обновление текущего времени. Устанавливаем текущий момент времени как момент завершения квантового интервала задачи" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1510" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-78" target="3FFpKMN7CzBTacpiuhmd-83">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="1740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-80" value="да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3FFpKMN7CzBTacpiuhmd-79">
+          <mxGeometry x="-0.1411" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-78" target="3FFpKMN7CzBTacpiuhmd-84">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="1685" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-82" value="нет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3FFpKMN7CzBTacpiuhmd-81">
+          <mxGeometry x="-0.103" y="-2" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-78" value="Осталось время для задачи? Проверяется, если оставшееся время выполнения задачи больше нуля:" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="507.5" y="1630" width="245" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-83">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="1900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-83" value="Задача не завершена, её нужно вернуть в очередь для дальнейшей обработки" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="1710" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-84" target="3FFpKMN7CzBTacpiuhmd-90">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="1900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-84" value="Задача завершена, и мы фиксируем её время завершения" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="752.5" y="1710" width="147.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-87" target="3FFpKMN7CzBTacpiuhmd-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-87" value="Если в очереди нет событий, цикл завершится, и программа перейдёт к следующему шагу" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="1736" width="140" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-90">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="2040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-90" value="Определяются процессоры, которые свободны для выполнения задач в данный момент времени (то есть, их время освобождения меньше или равно текущему времени)." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1900" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-95" target="3FFpKMN7CzBTacpiuhmd-98">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="2200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-97" value="да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3FFpKMN7CzBTacpiuhmd-96">
+          <mxGeometry x="-0.1684" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-95" value="Проверяется, есть ли задачи в очереди и есть ли процессоры, готовые их выполнить. Если оба условия выполняются, продолжается следующий шаг." style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="465" y="2040" width="350" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-98" target="3FFpKMN7CzBTacpiuhmd-100">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="2320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-98" value="Задача извлекается из начала очереди ожидания и готовится к назначению на процессор" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="555" y="2190" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-100" target="3FFpKMN7CzBTacpiuhmd-102">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="2440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-100" value="&#xa;Выбирается первый доступный процессор для назначения задачи.&#xa;&#xa;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="2330" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-102" target="3FFpKMN7CzBTacpiuhmd-104">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="2590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-102" value="&#xa;Если между текущим временем и временем, когда процессор освободился в последний раз, существует промежуток (простой), то он учитывается и добавляется к общему времени простоя для этого процессора.&#xa;&#xa;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="2440" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-104" target="3FFpKMN7CzBTacpiuhmd-108">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="2710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-104" value="Задача ожидает в очереди до тех пор, пока не будет назначена на процессор. Обновляется время её ожидания в очереди." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="555" y="2600" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-109" value="constant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-108" target="3FFpKMN7CzBTacpiuhmd-110">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="2770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-108" target="3FFpKMN7CzBTacpiuhmd-112">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="2770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-113" value="uniform" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3FFpKMN7CzBTacpiuhmd-111">
+          <mxGeometry x="-0.1879" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-108" target="3FFpKMN7CzBTacpiuhmd-115">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="2850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-108" value="Определяется время, которое задача будет выполнять на процессоре:" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="2720" width="235" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-110" target="3FFpKMN7CzBTacpiuhmd-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-110" value="Если квант времени постоянный (sigma_type = &quot;constant&quot;), то выделяется фиксированное время &lt;code&gt;sigma_value&lt;/code&gt;." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="245" y="2740" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-112" target="3FFpKMN7CzBTacpiuhmd-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-112" value="Если тип квантования &quot;uniform&quot;, то время выбирается случайным образом в пределах заданного диапазона." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="2730" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-115" target="3FFpKMN7CzBTacpiuhmd-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-115" value="Для других типов квантования используется значение &lt;code&gt;sigma_value&lt;/code&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="2850" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-116" target="3FFpKMN7CzBTacpiuhmd-121">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="3090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-116" value="Вычисляется фактическое время выполнения задачи в текущем квантовом интервале (min(allocated_time, remaining_time))" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="535" y="2960" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-121" target="3FFpKMN7CzBTacpiuhmd-123">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="3200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-121" value="Время переключений (context time) увеличивается на значение τ (время подготовки между переключениями задач)." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="3090" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-123" target="3FFpKMN7CzBTacpiuhmd-125">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="3310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-123" value="Время вычислений (service time) увеличивается на время, фактически потраченное на обработку задачи в текущем квантовом интервале." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="3200" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-125" target="3FFpKMN7CzBTacpiuhmd-127">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="3430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-125" value="Оставшееся время задачи уменьшается на фактическое время квантования." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="3320" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-127" target="3FFpKMN7CzBTacpiuhmd-129">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="3455" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-127" value="Рассчитывается время завершения текущего квантового интервала задачи (current_time + τ + slice_time)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="555" y="3420" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-129" target="3FFpKMN7CzBTacpiuhmd-131">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="3455" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-129" value="Обновляется время, когда процессор освободится после завершения работы с задачей." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="3425" width="157.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-131" target="3FFpKMN7CzBTacpiuhmd-58">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-120" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-131" value="В очередь событий добавляется событие &quot;finish&quot; для данной задачи и процессора, чтобы в будущем зафиксировать её завершение." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="3425" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-136" target="3FFpKMN7CzBTacpiuhmd-138">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="1175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-136" value="После завершения всех задач вычисляется среднее время простоя для всех процессоров." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="1145" width="165" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-138" target="3FFpKMN7CzBTacpiuhmd-140">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="881.875" y="1080" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-138" value="Создаётся итоговая таблица с результатами по каждой задаче, которая включает в себя её время ожидания, время вычислений, время завершения и другие данные." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="1132.5" width="203.75" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3FFpKMN7CzBTacpiuhmd-140" target="3FFpKMN7CzBTacpiuhmd-142">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="881.875" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-140" value="Функция возвращает итоговые данные: таблицу с результатами по задачам и среднее время простоя процессоров." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="783.37" y="1010" width="197.01" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3FFpKMN7CzBTacpiuhmd-142" value="конец алгоритма" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="802.81" y="880" width="158.13" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
